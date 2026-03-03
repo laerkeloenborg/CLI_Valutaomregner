@@ -10,8 +10,8 @@ Programmet bruger ExchangeRate-API til at hente aktuelle valutakurser.
 # Sådan henter du projektet
 - Klon projektet fra GitHub
     ```(bash)
-    git clone <repository_url>
-    cd <projekt_mappe>
+    git clone https://github.com/DITBRUGERNAVN/CLI_Valutaomregner.git
+    cd cli-valutaomregner
 
 - Opret virtuelt miljø og aktivér det
     ```(bash)
