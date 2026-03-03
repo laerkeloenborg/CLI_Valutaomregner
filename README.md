@@ -9,7 +9,7 @@ Programmet bruger ExchangeRate-API til at hente aktuelle valutakurser.
 
 # Sådan henter du projektet
 - Klon projektet fra GitHub
-    (bash)
+    ```(bash)
     git clone <repository_url>
     cd <projekt_mappe>
 
@@ -18,27 +18,27 @@ Programmet bruger ExchangeRate-API til at hente aktuelle valutakurser.
     python -m venv venv
 
     Windows:
-    `venv\Scripts\activate
+    venv\Scripts\activate
 
     Mac/Linux:
-    `source venv/bin/activate
+    source venv/bin/activate
 
 - Installér nødvendige pakker
-    (bash)
+    ```(bash)
     pip install requests
 
 
 # Spdan kører du projektet
 - Første gang / Din API key skal gemmes 
-    (bash)
+    ```(bash)
     python program.py --key DIN_API_KEY
 
 - Herefter kan programmet køres uden at angive ens API key
-    (bash)
+    ```(bash)
     python program.py
 
 
 # Når du er færdig 
 - Deaktiver det virtuelle miljø
-    (bash)
+    ```(bash)
     deactivate
