@@ -9,12 +9,12 @@ Programmet bruger ExchangeRate-API til at hente aktuelle valutakurser.
 
 # Sådan henter du projektet
 - Klon projektet fra GitHub
-    ```(bash)
+    ```bash
     git clone https://github.com/DITBRUGERNAVN/CLI_Valutaomregner.git
     cd cli-valutaomregner
 
 - Opret virtuelt miljø og aktivér det
-    ```(bash)
+    ```bash
     python -m venv venv
 
     Windows:
@@ -24,19 +24,19 @@ Programmet bruger ExchangeRate-API til at hente aktuelle valutakurser.
     source venv/bin/activate
 
 - Installér nødvendige pakker
-    ```(bash)
+    ```bash
     pip install requests
 
 # Sådan kører du projektet
-- Første gang / Din API key skal gemmes 
-    ```(bash)
+- Første gang programmet køres, skal din API key gemmes
+    ```bash
     python program.py --key DIN_API_KEY
 
 - Herefter kan programmet køres uden at angive ens API key
-    ```(bash)
+    ```bash
     python program.py
 
 # Når du er færdig 
 - Deaktiver det virtuelle miljø
-    ```(bash)
+    ```bash
     deactivate
