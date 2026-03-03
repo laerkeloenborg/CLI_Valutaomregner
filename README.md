@@ -11,7 +11,7 @@ Programmet bruger ExchangeRate-API til at hente aktuelle valutakurser.
 - Klon projektet fra GitHub
     ```bash
     git clone https://github.com/DITBRUGERNAVN/CLI_Valutaomregner.git
-    cd cli-valutaomregner
+    cd CLI-valutaomregner
 
 - Opret virtuelt miljø og aktivér det
     ```bash
