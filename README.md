@@ -27,8 +27,7 @@ Programmet bruger ExchangeRate-API til at hente aktuelle valutakurser.
     ```(bash)
     pip install requests
 
-
-# Spdan kører du projektet
+# Sådan kører du projektet
 - Første gang / Din API key skal gemmes 
     ```(bash)
     python program.py --key DIN_API_KEY
@@ -36,7 +35,6 @@ Programmet bruger ExchangeRate-API til at hente aktuelle valutakurser.
 - Herefter kan programmet køres uden at angive ens API key
     ```(bash)
     python program.py
-
 
 # Når du er færdig 
 - Deaktiver det virtuelle miljø

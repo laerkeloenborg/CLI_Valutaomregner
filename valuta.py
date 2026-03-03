@@ -3,11 +3,13 @@ import argparse, requests
 parser = argparse.ArgumentParser()
 parser.add_argument("--key")
 args = parser.parse_args()
+api_key = None
 
 if args.key:
     with open(".env", "w") as file:
         file.write("API_KEY=" + args.key)
     print("API key: ", args.key, " er gemt")
+    api_key = args.key
 else:
     try:
         with open(".env", "r") as file:
@@ -17,13 +19,13 @@ else:
                 api_key = line.split("=")[1]
                 print("API key fundet:", api_key)
             else:
-                print("Ingen API key fundet. Brug --key første gang.")
+                print("Ingen API key fundet.")
 
     except FileNotFoundError:
-        print("Ingen API key fundet. Brug --key første gang.")
+        print("Ingen API key fundet.")
 
 
-def getApiData(api_key, base_currency):
+def get_api_data(api_key, base_currency):
     url = f"https://v6.exchangerate-api.com/v6/{api_key}/latest/{base_currency}"
     
     response = requests.get(url)
@@ -38,7 +40,7 @@ def getApiData(api_key, base_currency):
     
     return data["conversion_rates"]
 
-def convertCurrency(amount, rate):
+def convert_currency(amount, rate):
     return amount * rate
 
 def main():
@@ -52,7 +54,7 @@ def main():
         print("Beløbet er ugyldigt")
         return
     
-    rates = getApiData(api_key,base_currency)
+    rates = get_api_data(api_key,base_currency)
     if rates is None:
         return
     
@@ -61,9 +63,12 @@ def main():
         return
     
     rate = rates[target_currency]
-    converted_amount = convertCurrency(amount, rate)
+    converted_amount = convert_currency(amount, rate)
 
     print(f"\n{amount} {base_currency} = {converted_amount:.2f} {target_currency}")
 
 if __name__ == "__main__":
-     main()
+    if api_key:
+        main()
+    else:
+        print("Programmet kan ikke starte uden en API key -  Brug --key første gang.")
