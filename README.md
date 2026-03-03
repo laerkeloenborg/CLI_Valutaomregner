@@ -14,14 +14,14 @@ Programmet bruger ExchangeRate-API til at hente aktuelle valutakurser.
     cd <projekt_mappe>
 
 - Opret virtuelt miljø og aktivér det
-    (bash)
+    ```(bash)
     python -m venv venv
 
     Windows:
-    venv\Scripts\activate
+    `venv\Scripts\activate
 
     Mac/Linux:
-    source venv/bin/activate
+    `source venv/bin/activate
 
 - Installér nødvendige pakker
     (bash)
